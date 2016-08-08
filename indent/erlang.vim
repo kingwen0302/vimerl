@@ -6,6 +6,14 @@
 " Last Change:  2010 Aug 30
 
 " Only load this indent file when no other was loaded.
+if !exists("g:erlangAutoIndent")
+    let g:erlangAutoIndent = 0
+endif
+
+if g:erlangAutoIndent == 0
+    finish
+endif
+
 if exists("b:did_indent")
   finish
 endif
